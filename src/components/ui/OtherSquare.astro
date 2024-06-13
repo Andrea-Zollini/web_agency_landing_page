@@ -1,0 +1,20 @@
+---
+interface Props {
+  image?: string;
+  title?: string;
+  description?: string;
+  text_color: string;
+}
+const { image, title, description, text_color } = Astro.props;
+---
+
+<div
+  class=`bg-[url(${image})] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-end lg:min-h-[600px]`
+>
+  <div class="pb-[3.5rem] max-w-[55%] text-center">
+    <h3 class=`text-[1.5rem] leading-10 mb-5 ${text_color} fraunces-700`>
+      {title}
+    </h3>
+    <p class="text-dark-blue/60 text-[1rem]">{description}</p>
+  </div>
+</div>

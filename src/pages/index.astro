@@ -1,7 +1,66 @@
 ---
 import App from "../layouts/App.astro";
+import { Image } from "astro:assets";
+import Square from "../components/ui/Square.astro";
+import OtherSquare from "../components/ui/OtherSquare.astro";
 ---
 
 <App title="Home Page">
-  <h1>test</h1>
+  <main>
+    <section class="grid grid-cols-2">
+      <Square
+        title="Transform your brand"
+        description="We are a full-service creative agency specializing in helping brands grow fast.Engage your clients through compelling visuals that do most of the marketing for you."
+        link="learn more"
+        borderColor="yellow"
+      />
+      <Square image="'/images/desktop/image-transform.jpg'" />
+      <Square image="'/images/desktop/image-stand-out.jpg'" />
+      <Square
+        title="Stand out to the right audience"
+        description="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places."
+        link="learn more"
+        borderColor="soft-red"
+      />
+      <OtherSquare
+        image="'/images/desktop/image-graphic-design.jpg'"
+        title="Graphic design"
+        text_color="text-moderate-cyan"
+        description="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention."
+      />
+      <OtherSquare
+        image="'/images/desktop/image-photography.jpg'"
+        title="Photography"
+        text_color="text-dark-blue"
+        description="Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
+      />
+    </section>
+    <section></section>
+    <section class="lg:flex w-full">
+      <Image
+        src="/images/desktop/image-gallery-milkbottles.jpg"
+        alt="Milkbottles"
+        width={360}
+        height={540}
+      />
+      <Image
+        src="/images/desktop/image-gallery-orange.jpg"
+        alt="Orange"
+        width={360}
+        height={540}
+      />
+      <Image
+        src="/images/desktop/image-gallery-cone.jpg"
+        alt="Cone"
+        width={360}
+        height={540}
+      />
+      <Image
+        src="/images/desktop/image-gallery-sugarcubes.jpg"
+        alt="Sugar Cubes"
+        width={360}
+        height={540}
+      />
+    </section>
+  </main>
 </App>

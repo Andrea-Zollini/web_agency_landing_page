@@ -1,0 +1,24 @@
+---
+interface Props {
+  image?: string;
+  title?: string;
+  description?: string;
+  link?: string;
+  borderColor?: string;
+}
+const { image, title, description, link, borderColor } = Astro.props;
+---
+
+<div
+  class=`bg-[url(${image})] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center lg:min-h-[600px]`
+>
+  <div class="max-w-[60%] text-desaturated-blue">
+    <h3 class="text-[2.5rem] leading-10 mb-10 fraunces-700">{title}</h3>
+    <p class="text-dark-blue/60 leading-7 mb-10">{description}</p>
+    <a
+      href="#"
+      class=`uppercase fraunces-700 text-base border-b-2 border-${borderColor}`
+      >{link}</a
+    >
+  </div>
+</div>
