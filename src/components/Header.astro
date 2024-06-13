@@ -1,7 +1,40 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
-<header>
-  <p>Header</p>
+<script>
+  const nav = document.querySelector("nav");
+  const links = nav?.querySelectorAll("a");
+
+  const currentUrl = window.location.href;
+  links?.forEach((link) => {
+    if (link.href === currentUrl) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+<header class="flex justify-between items-center p-11">
+  <Image src="/images/logo.svg" width="200" height="200" alt="Agency Logo" />
+
+  <nav>
+    <ul class="flex items-center space-x-8 text-white/90">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projects</a></li>
+      <li>
+        <a
+          href="#"
+          class="uppercase text-desaturated-blue bg-white py-4 px-5 rounded-full"
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </nav>
 </header>
+
+<style>
+  .active {
+    color: red;
+  }
+</style>

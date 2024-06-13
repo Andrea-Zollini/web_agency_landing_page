@@ -4,6 +4,7 @@ export default {
 	theme: {
 		colors: {
 			'soft-red': '#fe7867',
+			'blue': '#3DBEFF',
 			'yellow': '	#fad400',
 			'dark-cyan': '#25564b',
 			'dark-blue': '#19536b',
@@ -14,7 +15,9 @@ export default {
 			'grayish-blue': '#a7abae',
 			'white': '#ffffff',
 		},
-		extend: {},
+		extend: {
+		},
 	},
 	plugins: [],
 }
+
