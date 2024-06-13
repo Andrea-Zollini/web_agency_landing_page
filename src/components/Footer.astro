@@ -1,7 +1,49 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
-<footer>
-  <p>Footer</p>
+<footer
+  class="text-moderate-cyan flex items-center justify-between flex-col bg-[#90D4C5] min-h-[350px] py-[70px]"
+>
+  <div class="flex flex-col items-center">
+    <div class="logo">
+      <Image
+        src="/images/logo.svg"
+        alt="logo"
+        width={170}
+        height={170}
+        class="fill-moderate-cyan"
+      />
+    </div>
+
+    <nav class="pt-9">
+      <ul class="flex space-x-10">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <ul class="flex space-x-6">
+    <li>
+      <Image src="/images/icon-facebook.svg" alt="" width={20} height={20} />
+    </li>
+    <li>
+      <Image src="/images/icon-instagram.svg" alt="" width={20} height={20} />
+    </li>
+    <li>
+      <Image src="/images/icon-twitter.svg" alt="" width={20} height={20} />
+    </li>
+    <li>
+      <Image src="/images/icon-pinterest.svg" alt="" width={20} height={20} />
+    </li>
+  </ul>
 </footer>
+
+<style>
+  .logo {
+    filter: brightness(0) saturate(100%) invert(38%) sepia(11%) saturate(1813%)
+      hue-rotate(118deg) brightness(93%) contrast(94%);
+  }
+</style>

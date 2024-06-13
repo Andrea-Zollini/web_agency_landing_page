@@ -1,5 +1,6 @@
 ---
 import Header from "./Header.astro";
+import { Image } from "astro:assets";
 ---
 
 <section
@@ -11,5 +12,12 @@ import Header from "./Header.astro";
     we are creatives
   </h1>
 
-  <div class="arrow text-9xl text-center mt-[90px]">&darr;</div>
+  <div class="arrow flex justify-center mt-[90px]">
+    <Image
+      src="/images/icon-arrow-down.svg"
+      alt="arrow"
+      width="50"
+      height="50"
+    />
+  </div>
 </section>
